@@ -43,7 +43,8 @@ def GetColorCloseness(red, green, blue):
 for h in range(y):
     for w in range(x):
         r, g, b = image.getpixel((w, h))
-        finalmessage = finalmessage + GetColorCloseness(r, g, b) + GetColorCloseness(r, g, b)
+        colortext = GetColorCloseness(r, g, b)
+        finalmessage = finalmessage + colortext + colortext
     finalmessage = finalmessage + "\n"
 f.write(finalmessage)
 f.close()
