@@ -20,26 +20,8 @@ if pathtowrite[len(pathtowrite) - 4:len(pathtowrite)] != '.txt':
 f = open(pathtowrite, 'w')
 def GetColorCloseness(red, green, blue):
     (hue, saturation, value) = colors.rgb_to_hsv(red / 255, green / 255, blue /255)
-    if value >= .90:
-        return "#"
-    if value >= .80:
-        return "&"
-    if value >= .70:
-        return "0"
-    if value >= .60:
-        return "O"
-    if value >= .50:
-        return "="
-    if value >= .40:
-        return "*"
-    if value >= .30:
-        return "+"
-    if value >= .20:
-        return "-"
-    if value >= .10:
-        return "."
-    else:
-        return " "
+    pallete = (' ', '.', '-', '+', '*', '=', 'O', '0', '&', '#')
+    return pallete[int(value*len(pallete))]
 for h in range(y):
     for w in range(x):
         r, g, b = image.getpixel((w, h))
