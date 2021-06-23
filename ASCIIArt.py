@@ -1,11 +1,8 @@
 from PIL import Image, ImageDraw, ImageFont
 import colorsys as colors
 import math
-import av
 import os
-import time as t
 import sys
-import numpy as np
 nineup = '#'
 ninedown = '$'
 eightup = '8'
